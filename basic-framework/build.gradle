@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    // 编译SDK的版本
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    // build tools的版本
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+//    resourcePrefix "anl_"
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+
+    // 移除lint检查的error
+    lintOptions {
+        abortOnError false
+    }
+
+    //指定so库目录
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']//这一行是没有的，如果我们有.so文件就需要加上这一行代码
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+//注意：所有依赖必须明确版本号，不然同步Maven仓库审核不了
+dependencies {
+    implementation fileTree(include: '*.jar', dir: 'lib')
+    //support兼容库
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+
+    // 全部模块共享依赖资源(必须)
+    implementation project(':common-resource')
+    //compile 'com.zftlive.android.library:common-resource:1.0.1'
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    //内存检测工具(只有debug生效.debug/test无效果，只是为了编译可以通过)
+    //    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    //    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+
+}
+
+//生成jar脚本--> gradle makeJar
+//apply from: 'build-jar.gradle'
+
+//注意：不能放到第二行，否则会报错，顺序不能动,执行以下命令发布到仓库
+// -->gradle install
+// --> gradle bintrayUpload
+//apply from: '../install-module.gradle'
+//apply from: '../bintray-upload.gradle'

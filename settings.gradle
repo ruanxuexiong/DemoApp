@@ -1,0 +1,1 @@
+include ':app', ':view-util', ':common-resource', ':basic-framework'

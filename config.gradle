@@ -1,0 +1,34 @@
+ext {
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.2",
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+//    ext {
+//        bintrayRepo = 'android'
+//        bintrayName = 'basic-framework'
+//
+//        //compile 'com.zftlive.android.library:basic-framework:1.0.0'
+//        publishedGroupId = 'com.zftlive.android.library'
+//        artifact = 'basic-framework'
+//
+//        libraryVersionCode = 3
+//        libraryVersionName = '1.0.2'
+//        libraryName = 'AndroidBasicFramework'
+//        libraryDescription = 'Android develop framework,include basic base classes/widgets/tools/common abstract'
+//
+//        siteUrl = 'http://git.oschina.net/zftlive/zftlive'
+//        gitUrl = 'https://git.oschina.net/zftlive/zftlive.git'
+//
+//        developerId = 'zengfantian'
+//        developerName = '曾繁添'
+//        developerEmail = 'zftlive@163.com'
+//
+//        allLicenses = ["Apache-2.0"]
+//        licenseName = 'The Apache Software License, Version 2.0'
+//        licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    }
+}
