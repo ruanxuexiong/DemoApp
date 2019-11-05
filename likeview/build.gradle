@@ -1,0 +1,81 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+}
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9'
+    }
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    testCompile 'junit:junit:4.12'
+}
+
+
+
+publish {
+    userOrg = 'qkxyjren'
+    groupId = 'com.jaren'
+    artifactId = 'likeview'
+    publishVersion = rootProject.ext.android.versionName
+    desc = 'brilliant LikeView'
+    website = 'https://github.com/qkxyjren/LikeView'
+}
+
+//
+//ext {
+//    bintrayRepo = 'maven'
+//    bintrayName = 'likeview'
+//    publishedGroupId = 'com.jaren'
+//    artifact = 'likeview'
+//    libraryVersion =rootProject.ext.versionName
+//    libraryDescription = 'brilliant LikeView '
+//    libraryName = 'likeview'
+//    siteUrl = 'https://github.com/qkxyjren/LikeView'
+//    gitUrl = 'https://github.com/qkxyjren/LikeView.git'
+//
+//    developerId = 'jaren'
+//    developerName = 'jaren'
+//    developerEmail = 'qkxywwbs@163.com'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
