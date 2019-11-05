@@ -1,1 +1,1 @@
-include ':app', ':view-util', ':common-resource', ':basic-framework'
+include ':app', ':view-util', ':common-resource', ':basic-framework', ':network', ':service', ':imageloader', ':sharesdk', ':likeview'

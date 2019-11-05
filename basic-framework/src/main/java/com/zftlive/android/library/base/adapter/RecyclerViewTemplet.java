@@ -3,6 +3,7 @@ package com.zftlive.android.library.base.adapter;
 import android.content.Context;
 import android.support.annotation.IdRes;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.zftlive.android.library.base.templet.IRecyclerViewTemplet;

@@ -26,51 +26,55 @@ import com.zftlive.android.library.base.IBaseConstant;
 
 /**
  * Activity接口
- * 
+ *
  * @author
  * @version 1.0
- * 
  */
- public interface IBaseActivity extends IBaseConstant {
+public interface IBaseActivity extends IBaseConstant {
 
-  /**
-   * 在setContentView之前的一些window配置
-   * 
-   * @param savedInstanceState
-   */
-   void config(Bundle savedInstanceState);
+    /**
+     * 在setContentView之前的一些window配置
+     *
+     * @param savedInstanceState
+     */
+    void config(Bundle savedInstanceState);
 
-  /**
-   * 绑定渲染视图的布局文件
-   * 
-   * @return 布局文件资源id
-   */
-   int bindLayout();
+    /**
+     * 绑定渲染视图的布局文件
+     *
+     * @return 布局文件资源id
+     */
+    int bindLayout();
 
-  /**
-   * 绑定渲染View
-   * 
-   * @return
-   */
-   View bindView();
+    /**
+     * 绑定渲染View
+     *
+     * @return
+     */
+    View bindView();
 
-  /**
-   * 初始化界面参数
-   * 
-   * @param parms
-   */
-   void initParams(Bundle parms);
+    /**
+     * 初始化界面参数
+     *
+     * @param params
+     */
+    void initParams(Bundle params);
 
-  /**
-   * 初始化控件
-   */
-   void initView(final View view);
+    /**
+     * 初始化控件
+     */
+    void initView(final View view);
 
-  /**
-   * 业务处理操作（onCreate方法中调用）
-   * 
-   * @param mContext 当前Activity对象
-   */
-   void doBusiness(Context mContext);
+    /**
+     * 事件监听
+     */
+    void initListener();
+
+    /**
+     * 业务处理操作（onCreate方法中调用）
+     *
+     * @param mContext 当前Activity对象
+     */
+    void doBusiness(Context mContext);
 
 }

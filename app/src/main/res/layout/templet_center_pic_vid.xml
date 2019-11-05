@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="10dp"
+    android:paddingRight="16dp">
+
+    <include layout="@layout/include_news_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_cover_feed"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/anl_gray_a5aab2"
+            android:scaleType="centerCrop"
+            skin:drawShadow="@color/anl_white"
+            skin:enable="true" />
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/play_video_select" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_rectangle_translucent"
+            android:paddingLeft="5dp"
+            android:paddingTop="3dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:id="@+id/tv_bottom_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="2dp"
+                android:gravity="center"
+                android:minWidth="30dp"
+                android:text="02:11"
+                android:textColor="@color/anl_white"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/include_news_bottom" />
+
+    <include layout="@layout/include_item" />
+</LinearLayout>

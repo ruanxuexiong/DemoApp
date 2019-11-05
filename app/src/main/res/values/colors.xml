@@ -8,7 +8,7 @@
     
     <color name="color_gray_translucent">#5000</color>
 
-
+    <color name="color_gray_translucent1">#00000000</color>
     <color name="app_color_theme_1">#EF5362</color> <!-- Grapefruit -->
     <color name="app_color_theme_2">#FE6D4B</color> <!-- Bittersweet -->
     <color name="app_color_theme_3">#FFCF47</color> <!-- Sunflower -->

@@ -11,6 +11,11 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/basic-framework" />
             <option value="$PROJECT_DIR$/common-resource" />
+            <option value="$PROJECT_DIR$/imageloader" />
+            <option value="$PROJECT_DIR$/likeview" />
+            <option value="$PROJECT_DIR$/network" />
+            <option value="$PROJECT_DIR$/service" />
+            <option value="$PROJECT_DIR$/sharesdk" />
             <option value="$PROJECT_DIR$/view-util" />
           </set>
         </option>

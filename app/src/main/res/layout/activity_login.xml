@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/anl_white">
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/tv_close_bg" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/welcome_login"
+        android:textColor="@color/anl_black_50_alpha"
+        android:textSize="32sp" />
+
+    <com.xing.widget.OverrideEditText
+        android:id="@+id/ed_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="35dp"
+        android:background="@null"
+        android:drawableRight="@mipmap/wallet_base_result_step_fail"
+        android:hint="@string/phone_num"
+        android:inputType="phone"
+        android:maxLength="11" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/ed_account"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="35dp"
+        android:background="@color/anl_black" />
+
+    <com.xing.widget.OverrideEditText
+        android:id="@+id/ed_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed_account"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="75dp"
+        android:background="@null"
+        android:drawableRight="@mipmap/wallet_base_result_step_fail"
+        android:hint="@string/phone_password"
+        android:inputType="textPassword"
+        android:maxLength="17" />
+
+    <ImageView
+        android:id="@+id/pass_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed_account"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@mipmap/wallet_home_ch_eye_close" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/ed_password"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="35dp"
+        android:background="@color/anl_black" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed_password"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/btn_bg_select"
+        android:text="@string/login"
+        android:textSize="18sp" />
+</RelativeLayout>

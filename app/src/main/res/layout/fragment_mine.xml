@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/anl_white"
+    tools:context=".activity.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/anl_black">
+
+                <ImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@mipmap/b4a" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_toRightOf="@+id/img_avatar"
+                    android:text="暂未登录"
+                    android:textColor="@color/anl_white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_collapseMode="pin">
+
+                <TextView
+                    android:id="@+id/center_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="暂未登录"
+                    android:textColor="@color/anl_white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="45dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_radio_whiter"
+        android:orientation="horizontal"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom">
+
+        <TextView
+            android:id="@+id/tv_collection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableTop="@mipmap/bai"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="收藏"
+            android:textColor="#929292"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_history"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableTop="@mipmap/bak"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="历史"
+            android:textColor="#929292"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_shopping"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableTop="@mipmap/b49"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="已购"
+            android:textColor="#929292"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableTop="@mipmap/bas"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="邦币"
+            android:textColor="#929292"
+            android:textSize="14sp" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

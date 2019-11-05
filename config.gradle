@@ -2,11 +2,15 @@ ext {
     android = [
             compileSdkVersion: 28,
             buildToolsVersion: "28.0.2",
-            minSdkVersion    : 19,
+            minSdkVersion    : 24,
             targetSdkVersion : 28,
             versionCode      : 1,
-            versionName      : "1.0"
+            versionName     : "1.0.0"
+
     ]
+    junitVersion = '4.12'
+    daggerVersion = '2.23.2'
+
 //    ext {
 //        bintrayRepo = 'android'
 //        bintrayName = 'basic-framework'

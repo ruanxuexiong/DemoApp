@@ -47,6 +47,9 @@ dependencies {
     implementation project(':common-resource')
     //compile 'com.zftlive.android.library:common-resource:1.0.1'
     api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(path: ':sharesdk')
+    //打印日志
+    api 'com.orhanobut:logger:2.1.1'
     //内存检测工具(只有debug生效.debug/test无效果，只是为了编译可以通过)
     //    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
     //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'

@@ -26,7 +26,6 @@ import android.os.Bundle;
  *
  * @author
  * @version 1.0
- *
  */
 public abstract class CommonActivity extends BaseActivity {
 
@@ -37,6 +36,11 @@ public abstract class CommonActivity extends BaseActivity {
 
     @Override
     public void doBusiness(Context mContext) {
+
+    }
+
+    @Override
+    public void initListener() {
 
     }
 }

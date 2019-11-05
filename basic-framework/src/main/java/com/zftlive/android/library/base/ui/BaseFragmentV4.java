@@ -41,7 +41,7 @@ import com.zftlive.android.library.widget.WindowTitle;
 /**
  * Fragment基类
  * 
- * @author
+ * @authorloadDataOnce
  * @version 1.0
  * 
  */
@@ -91,7 +91,6 @@ public abstract class BaseFragmentV4 extends Fragment implements IBaseFragment,I
         mHasLoadedData = true;
       }
   }
-  
   @Override
   public void onAttach(Activity activity) {
     super.onAttach(activity);
